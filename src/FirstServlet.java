@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/FirstServlet")
 public class FirstServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	public static final String HTML_START="<html><body>";
+	public static final String HTML_START="<html><title>FirstServlet</title><body>";
 	public static final String HTML_END="</body></html>";
        
     /**
@@ -35,6 +35,7 @@ public class FirstServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		Date date = new Date();
 		out.println(HTML_START + "<h2>Hi There!</h2><br/><h3>Date="+date +"</h3>"+HTML_END);
+		
 	}
 
 	/**
